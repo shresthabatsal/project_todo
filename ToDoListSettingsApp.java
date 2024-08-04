@@ -11,12 +11,12 @@ public class ToDoListSettingsApp {
         // Create the frame
         JFrame frame = new JFrame("To-Do List - User Settings");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(700, 300);
+        frame.setSize(700, 700);
         frame.setLayout(null);
 
         // User Details Panel
         JPanel detailsPanel = new JPanel();
-        detailsPanel.setBounds(20, 20, 320, 220);
+        detailsPanel.setBounds(20, 20, 4000, 150);
         detailsPanel.setBorder(BorderFactory.createTitledBorder("User Details"));
         detailsPanel.setLayout(null);
 
@@ -24,7 +24,7 @@ public class ToDoListSettingsApp {
         JLabel nameLabel = new JLabel("Name:");
         nameLabel.setBounds(10, 20, 80, 25);
         JTextField nameField = new JTextField(currentUser.getName());
-        nameField.setBounds(100, 20, 200, 25);
+        nameField.setBounds(100, 20, 250, 25);
         detailsPanel.add(nameLabel);
         detailsPanel.add(nameField);
 
@@ -32,7 +32,7 @@ public class ToDoListSettingsApp {
         JLabel emailLabel = new JLabel("Email:");
         emailLabel.setBounds(10, 50, 80, 25);
         JTextField emailField = new JTextField(currentUser.getEmail());
-        emailField.setBounds(100, 50, 200, 25);
+        emailField.setBounds(100, 50, 250, 25);
         detailsPanel.add(emailLabel);
         detailsPanel.add(emailField);
 
@@ -40,7 +40,7 @@ public class ToDoListSettingsApp {
         JLabel phoneLabel = new JLabel("Phone:");
         phoneLabel.setBounds(10, 80, 80, 25);
         JTextField phoneField = new JTextField(currentUser.getPhone());
-        phoneField.setBounds(100, 80, 200, 25);
+        phoneField.setBounds(100, 80, 250, 25);
         detailsPanel.add(phoneLabel);
         detailsPanel.add(phoneField);
 
@@ -48,7 +48,7 @@ public class ToDoListSettingsApp {
         JLabel addressLabel = new JLabel("Address:");
         addressLabel.setBounds(10, 110, 80, 25);
         JTextField addressField = new JTextField(currentUser.getAddress());
-        addressField.setBounds(100, 110, 200, 25);
+        addressField.setBounds(100, 110, 250, 25);
         detailsPanel.add(addressLabel);
         detailsPanel.add(addressField);
 
@@ -59,7 +59,7 @@ public class ToDoListSettingsApp {
 
         // Password Change Panel
         JPanel passwordPanel = new JPanel();
-        passwordPanel.setBounds(360, 20, 320, 220);
+        passwordPanel.setBounds(10, 170, 360, 180);
         passwordPanel.setBorder(BorderFactory.createTitledBorder("Change Password"));
         passwordPanel.setLayout(null);
 
@@ -67,7 +67,7 @@ public class ToDoListSettingsApp {
         JLabel currentPasswordLabel = new JLabel("Current Password:");
         currentPasswordLabel.setBounds(10, 20, 130, 25);
         JPasswordField currentPasswordField = new JPasswordField();
-        currentPasswordField.setBounds(150, 20, 150, 25);
+        currentPasswordField.setBounds(150, 20, 190, 25);
         passwordPanel.add(currentPasswordLabel);
         passwordPanel.add(currentPasswordField);
 
@@ -75,7 +75,7 @@ public class ToDoListSettingsApp {
         JLabel newPasswordLabel = new JLabel("New Password:");
         newPasswordLabel.setBounds(10, 50, 130, 25);
         JPasswordField newPasswordField = new JPasswordField();
-        newPasswordField.setBounds(150, 50, 150, 25);
+        newPasswordField.setBounds(150, 50, 190, 25);
         passwordPanel.add(newPasswordLabel);
         passwordPanel.add(newPasswordField);
 
@@ -83,7 +83,7 @@ public class ToDoListSettingsApp {
         JLabel confirmPasswordLabel = new JLabel("Confirm Password:");
         confirmPasswordLabel.setBounds(10, 80, 130, 25);
         JPasswordField confirmPasswordField = new JPasswordField();
-        confirmPasswordField.setBounds(150, 80, 150, 25);
+        confirmPasswordField.setBounds(150, 80, 190, 25);
         passwordPanel.add(confirmPasswordLabel);
         passwordPanel.add(confirmPasswordField);
 
