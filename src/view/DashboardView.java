@@ -190,12 +190,20 @@ public class DashboardView extends JFrame implements ActionListener {
         btnSettings = createButton("Settings", "img//settings.png", 550);
         btnLogout = createButton("Logout", null, 595);
 
-        JButton button = new JButton("Logout");
-        button.setBounds(20, 595, 260, 40);
-        button.setBackground(Color.decode("#4682B4"));
-        button.setForeground(Color.WHITE);
-        button.setFont(FontLoad.getMontserratBold(16f));
-        menuPanel.add(button);
+        JButton logoutButton = new JButton("Logout");
+        logoutButton.setBounds(20, 595, 260, 40);
+        logoutButton.setBackground(Color.decode("#4682B4"));
+        logoutButton.setForeground(Color.WHITE);
+        logoutButton.setFont(FontLoad.getMontserratBold(16f));
+        logoutButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                LoginView loginPage = new LoginView();
+                loginPage.setVisible(true);
+                dispose();
+            }
+        });
+        menuPanel.add(logoutButton);
 
         menuPanel.add(btnToday);
         menuPanel.add(btnImportant);
