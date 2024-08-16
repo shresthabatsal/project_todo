@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug Java Program",
+            "request": "launch",
+            "mainClass": "YourMainClass",
+            "classPaths": [
+                "C:\\Users\\aadit\\Desktop\\TaskToDo\\lib\\mysql-connector-j-8.0.33.jar",
+                "${workspaceFolder}/bin"
+            ]
+        }
+    ]
+}
+
+
