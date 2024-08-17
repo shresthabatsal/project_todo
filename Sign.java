@@ -40,6 +40,27 @@ public class Sign {
         frame.add(signUpButton);
         frame.add(successLabel);
 
+        // Action listener for the sign-up button
+        signUpButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                String username = userText.getText();
+                String email = emailText.getText();
+                String password = new String(passwordText.getPassword());
+                String confirmPassword = new String(confirmPasswordText.getPassword());
+                
+                // Simple validation (more checks can be added)
+                if (username.isEmpty() || email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
+                    successLabel.setText("Please fill in all fields.");
+                } else if (!password.equals(confirmPassword)) {
+                    successLabel.setText("Passwords do not match.");
+                } else {
+                    // Simulate storing user data (just for example)
+                    successLabel.setText("Sign Up successful!");
+                    // Here, you would typically save the user data to a database
+                }
+            }
+        });
+
         // Set the frame visibility to true
         frame.setVisible(true);
     }
