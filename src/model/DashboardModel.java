@@ -7,7 +7,7 @@ public class DashboardModel {
     }
 
     public String getImportantQuery() {
-        return "SELECT * FROM tasks WHERE user_id = ? AND is_important = true AND is_complete = 0 AND due_date > CURDATE()";
+        return "SELECT * FROM tasks WHERE user_id = ? AND is_important = true AND is_complete = 0 AND due_date >= CURDATE()";
     }
 
     public String getUpcomingQuery() {
